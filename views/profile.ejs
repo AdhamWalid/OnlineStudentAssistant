@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Welcome, <span><%= username %></span>!</h1>
+
+        <div class="profile-card">
+            <div class="profile-info">
+                <p><strong>Username:</strong> <%= username %></p>
+
+                <p><strong>Email:</strong> <%= email %></p>
+                
+                <p><strong>Account Type:</strong> <%= type %></p>
+                
+                <p><strong>Coins:</strong> <%= coins %></p>
+
+                <p><strong>Account Creation Date:</strong> <%= createdAt %></p>
+
+            </div>
+            <br>
+            <a href="/home" class="logout-button">Home</a>
+            <a href="/logout" class="logout-button">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

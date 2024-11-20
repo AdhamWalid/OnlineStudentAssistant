@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="navbar-menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Admin Dashboard :D</h1>
+
+    <h2>Users</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Type</th>
+          <th>Coins</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user => { %>
+          <tr>
+            <td><%= i++ %></td>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+            <td><%= user.type %></td>
+            <td><%= user.coins %></td>
+            <td><%= new Date(user.createdAt).toLocaleString() %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <h2>Courses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Duration (hours)</th>
+          <th>Teacher</th>
+          <th>Students Enrolled</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% courses.forEach(course => { %>
+          <tr>
+            <td><%= i++ %></td>
+            <td><%= course.title %></td>
+            <td><%= course.description || 'N/A' %></td>
+            <td><%= course.duration %></td>
+            <td><%= course.teacher.username %></td>
+            <td><%= course.students.length %></td>
+            <td><%= new Date(course.createdAt).toLocaleString() %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <hr>
+  <br>
+  <p>Key notes for dev:</p>
+  <p>this page to be accessed by type (ADMIN) users only</p>
+</body>
+</html>

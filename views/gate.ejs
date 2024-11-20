@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student & Teacher Login & Signup</title>
+    <link rel="stylesheet" href="/styles/gate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <% if (user.userId) { %>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li></li>
+            <li></li>
+            <li><p>Logged in as <span id="loggedinname"><%= user.username %></span></p></li>
+        </ul>
+    </nav>
+    <% } %>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Welcome to the Student & Teacher Portal</h1>
+
+        <div class="form-container">
+            <div class="toggle">
+                <button id="loginToggle" class="active">Login</button>
+                <button id="signupToggle">Signup</button>
+                <button id="teacherToggle">Teachers</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="form active-form" method="POST">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" id="loginEmail" required>
+                <input type="password" placeholder="Password" id="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="form hidden" method="POST">
+                <h2>Signup</h2>
+                <input type="text" placeholder="Full Name" id="signupName" required>
+                <input type="email" placeholder="Email" id="signupEmail" required>
+                <input type="password" placeholder="Password" id="signupPassword" required>
+                <button type="submit">Signup</button>
+
+            </form>
+
+            <!-- Teacher Login Form -->
+            <form id="teacherForm" class="form hidden" method="POST">
+                <h2>Teacher Login</h2>
+                <input type="text" placeholder="Teacher ID" id="teacherId" required>
+                <input type="password" placeholder="Password" id="teacherPassword" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #1e1e1e;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar-menu {
+    list-style:none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-menu li {
+    margin: 0 25px;
+}
+
+.navbar-menu a {
+    color: #b0bec5;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #00e676;
+}
+
+/* Main Container */
+.container {
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #00e676;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.toggle button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    color: #b0bec5;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.toggle button.active,
+.toggle button:hover {
+    color: #00e676;
+    border-bottom: 2px solid #00e676;
+}
+
+.form {
+    display: none;
+    color: #e0e0e0;
+}
+
+.form.active-form {
+    display: block;
+}
+
+.form h2 {
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font-size: 1rem;
+}
+
+.form input::placeholder {
+    color: #b0bec5;
+}
+
+.form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00e676;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #00c853;
+}
+
+.toggle-message {
+    color: #b0bec5;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.toggle-message span {
+    color: #00e676;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#loggedinname{
+    color: #00e676;
+    text-decoration: solid;
+    motion: auto;
+}
+
+
+#loggedinname:hover{
+    color: #e2e600;
+    text-decoration: solid;
+}
